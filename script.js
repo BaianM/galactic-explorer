@@ -70,24 +70,45 @@ let FREIGHTER_FIRE_RANGE; // Dynamic range for pirate freighters
 const PLAYER_PROJECTILE_SPEED = 15; // Speed of player projectiles
 
 
-
 function preload() {
-    // Load images
-    spaceship = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/jevse0epuwspql8fuahc?_a=BBECd1AE0");
-    spacebackground = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/od0gbg3cgs1akzwbttt2?_a=BBECd1AE0");
-    asteroidImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/fpcbkcxu4scbh2y42us6?_a=BBECd1AE0");
-    commstationImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/kehapxjetpelf94oug24?_a=BBECd1AE0");
-    crystalAsteroidImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/vt3qqs3z8uym6ls9omkf?_a=BBECd1AE0");
-    spaceStation = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/ic29lbc2qwj3ofxrcrkj?_a=BBECd1AE0");
-    freighterImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/vtfwvol7vk4gktyhzx5l?_a=BBECd1AE0");
-    pirateFreighterImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/tqdckpvrcvobs2omdn28?_a=BBECd1AE0");
-    defencePlatformImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/ado9uujxlfpvz0ptfrkd?_a=BBECd1AE0");
+    // Load images from your local ASSETS folder
+    spaceship = loadImage("ASSETS/playership.png");
+    spacebackground = loadImage("ASSETS/spacebackground.jfif");
+    asteroidImage = loadImage("ASSETS/asteroid.jpg");
+    commstationImage = loadImage("ASSETS/commstation.png"); // Ensure this file is in ASSETS
+    crystalAsteroidImage = loadImage("ASSETS/crystalasteroid.png"); // Ensure this file is in ASSETS
+    spaceStation = loadImage("ASSETS/spacestation.png"); // Ensure this file is in ASSETS
+    freighterImage = loadImage("ASSETS/freighter.jpg");
+    pirateFreighterImage = loadImage("ASSETS/piratefreighter.jpg");
+    defencePlatformImage = loadImage("ASSETS/defenseplatform.jpg");
 
-    // Load audio
+    // Load audio from your local audio folder
     backgroundMusic = loadSound("audio/space-adventure.mp3");
     explosionSound = loadSound("audio/explosion.mp3");
     shootSound = loadSound("audio/shootsound.mp3");
 }
+
+
+
+//Old preload
+
+//function preload() {
+    // Load images
+    //spaceship = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/jevse0epuwspql8fuahc?_a=BBECd1AE0");
+    //spacebackground = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/od0gbg3cgs1akzwbttt2?_a=BBECd1AE0");
+    //asteroidImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/fpcbkcxu4scbh2y42us6?_a=BBECd1AE0");
+    //commstationImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/kehapxjetpelf94oug24?_a=BBECd1AE0");
+    //crystalAsteroidImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/vt3qqs3z8uym6ls9omkf?_a=BBECd1AE0");
+    //spaceStation = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/ic29lbc2qwj3ofxrcrkj?_a=BBECd1AE0");
+    //freighterImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/vtfwvol7vk4gktyhzx5l?_a=BBECd1AE0");
+    //pirateFreighterImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/tqdckpvrcvobs2omdn28?_a=BBECd1AE0");
+    //defencePlatformImage = loadImage("https://res.cloudinary.com/dzv7hjwfn/image/upload/f_auto/q_auto/ado9uujxlfpvz0ptfrkd?_a=BBECd1AE0");
+
+    // Load audio
+    //backgroundMusic = loadSound("audio/space-adventure.mp3");
+    //explosionSound = loadSound("audio/explosion.mp3");
+    //shootSound = loadSound("audio/shootsound.mp3");
+//}
 
 
 
@@ -1456,4 +1477,5 @@ function resetLevel4State() {
         };
         level4DefensePlatforms.push(platform);
     }
+
 }
